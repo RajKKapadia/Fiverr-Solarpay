@@ -9,6 +9,10 @@ I have recorded a quick video tutorial on this repository, you can watch it [her
 * in the .env file replace the CREDENTIALS with your service account file value
 * replace the GCP_CLOUD_STORAGE_BUCKET_NAME with your bucket name
 
+#### Virtual environment
+* create a virtual environment using `python3 -m venv venv`
+* activate the virtual environment using `source venv/bin/activate`, for Windows `.\venv\Scripts\activate`
+
 #### Run the code
 * for server
 `uvicorn run:app --host 0.0.0.0 --port 5000`
@@ -16,12 +20,4 @@ I have recorded a quick video tutorial on this repository, you can watch it [her
 `uvicorn run:app --reload`
 
 #### Set the Telegram webhook
-* either deploy the application on the server or use NGROK
-* replace YOUR_BASE_URL with your public URL not the localhost
-* send a POST request to `YOUR_BASE_URL/set-telegram-webhook`
-```json
-{
-"secret_token": "any random string",
-"url": "YOUR_BASE_URL/telegram"
-}
-```
+* call the endpoint `/set-wenhook`, it will set the webhook
