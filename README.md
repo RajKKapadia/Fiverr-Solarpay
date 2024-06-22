@@ -13,6 +13,9 @@ I have recorded a quick video tutorial on this repository, you can watch it [her
 * create a virtual environment using `python3 -m venv venv`
 * activate the virtual environment using `source venv/bin/activate`, for Windows `.\venv\Scripts\activate`
 
+#### install packages
+* install all the packages using `pip install -r requirements.txt`
+
 #### Run the code
 * for server
 `uvicorn run:app --host 0.0.0.0 --port 5000`
