@@ -13,6 +13,7 @@ with open(config.CREDENTIALS_FILE_PATH, "w") as f:
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = config.CREDENTIALS_FILE_PATH
 
 storage_client = storage.Client()
+print(storage_client)
 
 
 def generate_messages(messages: list, query: str) -> list:
@@ -51,3 +52,6 @@ def upload_file_to_gcs(local_file_path, destination_blob_name):
         return public_url
     except Exception as e:
         print(e)
+
+public_url = upload_file_to_gcs("/tmp/telegrambot/c4249170-3148-11ef-b1d9-9351419ea0a2.mp3", "c4249170-3148-11ef-b1d9-9351419ea0a2.mp3")
+print(public_url)
