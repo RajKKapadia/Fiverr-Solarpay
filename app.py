@@ -56,7 +56,7 @@ async def telegram(request: Request):
         return 'OK', 200
 
 
-@router.post('/set-telegram-webhook')
+@router.get('/set-telegram-webhook')
 async def set_telegram_webhook(request: Request):
     try:
         """Create and return the webhook URL {BASE_URL}/telegram"""
