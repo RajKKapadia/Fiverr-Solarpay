@@ -23,4 +23,4 @@ I have recorded a quick video tutorial on this repository, you can watch it [her
 `uvicorn run:app --reload`
 
 #### Set the Telegram webhook
-* call the endpoint `/set-wenhook`, it will set the webhook
+* call the endpoint `/set-telegram-webhook`, it will set the webhook
