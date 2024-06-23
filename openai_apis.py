@@ -51,7 +51,7 @@ def transcript_audio(ogg_file_path: str, file_id: str) -> dict:
 def chat_completion(text: str) -> str:
     try:
         response = client.chat.completions.create(
-            model='gpt-3.5-turbo',
+            model='gpt-4o-2024-05-13',
             messages=[
                 {'role': 'system', 'content': 'You are a helpful assistant.'},
                 {'role': 'user', 'content': text}
