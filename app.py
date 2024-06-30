@@ -62,8 +62,11 @@ async def set_telegram_webhook(request: Request):
         """Create and return the webhook URL {BASE_URL}/telegram"""
         base_url = str(request.base_url)
         webhook_url = f"{base_url}telegram"
-        set_webhook(webhook_url)
-        return "OK", 200
+        flag = set_webhook(webhook_url)
+        if flag:
+            return "OK", 200
+        else:
+            return 'BAD REQUEST', 400
     except Exception as e:
         print('Error at set_telegram_webhook...')
         print(e)
